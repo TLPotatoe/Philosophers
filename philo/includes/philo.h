@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 09:19:47 by tlamit            #+#    #+#             */
-/*   Updated: 2026/02/13 11:50:02 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/02/13 15:31:05 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ typedef enum e_mode
 {
 	SLEEPING = 0,
 	THINKING = 1,
-	EATING = 2
+	EATING = 2,
+	DEAD = 3
 }					t_mode;
 
 typedef struct s_philo

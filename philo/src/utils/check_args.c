@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 10:34:39 by tlamit            #+#    #+#             */
-/*   Updated: 2026/02/13 10:50:26 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/02/13 14:58:25 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ size_t	check_args(int argc, char **argv, t_philo_info *philo_data)
 	index = 1;
 	while (index < argc)
 		if (!ft_atoi(argv[index]))
-			return (1);
+			return (FAIL);
 	if (argc == 6 && !ft_atoi(argv[index]))
-		return (1);
+		return (FAIL);
 	philo_data->n_philo = ft_atoi(argv[1]);
 	philo_data->t_die = ft_atoi(argv[2]);
 	philo_data->t_eat = ft_atoi(argv[3]);
 	philo_data->t_sleep = ft_atoi(argv[4]);
 	if (argc == 6)
 		philo_data->eat_min = ft_atoi(argv[5]);
-	return (0);
+	return (OK);
 }
