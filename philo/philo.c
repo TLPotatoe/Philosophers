@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 09:09:30 by tlamit            #+#    #+#             */
-/*   Updated: 2026/02/13 15:00:08 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/02/23 19:50:22 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	main(int argc, char **argv)
 
 	if (argc != 5 && argc != 6)
 		return (1);
-	if (check_args(argc, argv, &philo_data))
+	if (check_args(argc, argv, &philo_data) == FAIL)
 		return (1);
-	if (!setup_philos_mutex(&philo_data))
+	if (setup_philos_mutex(&philo_data) == FAIL)
 		return (1);
 	return (0);
 }
