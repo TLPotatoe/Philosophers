@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   setup_philo_forks.c                                :+:      :+:    :+:   */
+/*   setup_philos_forks.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 15:19:18 by tlamit            #+#    #+#             */
-/*   Updated: 2026/02/23 20:12:40 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/02/26 10:48:26 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-size_t	setup_forks(t_philo *philos)
+size_t	setup_forks(t_philo_info)
 {
 }

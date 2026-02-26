@@ -6,7 +6,7 @@
 /*   By: tlamit <titouan.lamit@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 09:19:47 by tlamit            #+#    #+#             */
-/*   Updated: 2026/02/13 15:31:05 by tlamit           ###   ########.fr       */
+/*   Updated: 2026/02/26 10:48:48 by tlamit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,21 @@ typedef enum e_ret_code
 	FAIL = 1
 }					t_ret_code;
 
-typedef enum e_mode
+typedef enum e_status
 {
 	SLEEPING = 0,
 	THINKING = 1,
 	EATING = 2,
 	DEAD = 3
-}					t_mode;
+}					t_status;
 
 typedef struct s_philo
 {
 	size_t			id;
-	size_t			alive;
-	t_mode			state;
+	t_status		state;
 	pthread_t		thread;
 	pthread_mutex_t	fork_mutex;
-	struct s_philo	*next_philo;
-	struct s_philo	*prev_philo;
+	pthread_mutex_t	*next_fork;
 }					t_philo;
 
 typedef struct s_philo_info
